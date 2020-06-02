@@ -3,10 +3,10 @@ import { render, fireEvent } from '@testing-library/react';
 import Login from './Login';
 
 describe('Loing', () => {
-  let inputUserName;
-  let inputPassword;
-  let buttonLogin;
-  let textAlert;
+  let inputUserName: any;
+  let inputPassword: any;
+  let buttonLogin: any;
+  let textAlert: any;
 
   beforeEach(() => {
     const { getByTestId } = render(<Login />);

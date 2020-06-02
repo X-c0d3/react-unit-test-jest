@@ -34,7 +34,7 @@ const Login = () => {
         onChange={(e) => setPassword(e.target.value)}
       />{' '}
       <br />
-      <p data-testId='text-alert'>{message}</p>
+      <p data-testid='text-alert'>{message}</p>
       <button data-testid='button-login' type='button' onClick={handleLogin}>
         Login
       </button>
