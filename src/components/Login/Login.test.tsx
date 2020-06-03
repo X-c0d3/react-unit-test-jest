@@ -1,6 +1,15 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import {
+  render,
+  fireEvent,
+  cleanup,
+  getByLabelText,
+  waitFor,
+  waitForElementToBeRemoved,
+} from '@testing-library/react';
 import Login from './Login';
+
+//jest.mock('./utils/getRandomQuote');
 
 describe('Loing', () => {
   let inputUserName: any;
@@ -9,7 +18,10 @@ describe('Loing', () => {
   let textAlert: any;
 
   beforeEach(() => {
-    const { getByTestId } = render(<Login />);
+    const { getByTestId, getByText, container } = render(<Login />);
+    // expect(getByText(data[0])).toHaveStyle(`color: ${defaultColor};`)
+    //const passwordInput = getByLabelText(container, 'Password')
+
     inputUserName = getByTestId('input-username');
     inputPassword = getByTestId('input-password');
     buttonLogin = getByTestId('button-login');
